@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="center_container">
+<button onclick="showRegister()">Register</button>
+    <button onclick="showLogin()">Login</button>
+<form action="register.php" method="post" id="register_form">
+    <h2 id="register_header">Register</h2>
+    <label for="reg_username">Username:</label><br>
+    <input type="text" id="reg_username" name="username" required><br>
+    <label for="reg_password">Password:</label><br>
+    <input type="password" id="reg_password" name="password" required><br><br>
+    <input type="submit" name="register" value="Register">
+</form>
+
+<form action="login.php" method="post" id="login_form">
+    <h2 id="login_header">Login</h2>
+    <label for="login_username">Username:</label><br>
+    <input type="text" id="login_username" name="username" required><br>
+    <label for="login_password">Password:</label><br>
+    <input type="password" id="login_password" name="password" required><br><br>
+    <input type="submit" name="login" value="Login">
+</form>
+
+</div>
+
+<script>
+    const register_form = document.getElementById('register_form');
+    const login_form = document.getElementById("login_form");
+
+
+
+    function  showRegister(){
+        register_form.style.display = "flex";
+        login_form.style.display  ="none";
+    }
+
+    function  showLogin(){
+        login_form.style.display = "flex";
+        register_form.style.display  ="none";
+    }
+</script>
+
+</body>
+</html>
